@@ -42,11 +42,9 @@ let render = function(arr) {
                 createLi.classList.remove("done");
             }
         }
-
         createLi.appendChild(createBtn);
         createUl.appendChild(createLi);
     }
-
     form__submit.appendChild(createUl);
 };
 
@@ -75,7 +73,6 @@ btn[1].onclick = function() {
     let active = todoList.filter(function(myCallback){
         return myCallback.isActive === true;
     })
-
     render(active)
 }
 btn[2].onclick = function() {
@@ -84,7 +81,6 @@ btn[2].onclick = function() {
     let complete = todoList.filter(function(myCallback) {
         return myCallback.isActive === false;
     })
-
     render(complete);
 }
 btn[3].onclick = function() {
